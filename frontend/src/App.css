@@ -127,6 +127,10 @@ a {
   color: var(--color-e55812) !important;
 }
 
+.col-5 a:hover {
+  color: var(--color-e55812) !important;
+}
+
 /* HEADER PART ENDS HERE */
 
 /* HOME PAGE */
