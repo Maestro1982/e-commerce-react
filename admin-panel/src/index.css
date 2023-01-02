@@ -31,8 +31,19 @@ body {
   background-color: white !important;
 }
 
-.ant-layout-content {
-  background-color: white;
+.ant-layout-header h5 {
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.ant-layout-header p {
+  line-height: 20px;
+  font-size: 13px;
+}
+
+.ant-layout-header div .badge {
+  top: 16px;
+  right: -6px;
 }
 
 .ant-layout-sider {
@@ -61,8 +72,10 @@ body {
   display: none;
 }
 
-.main {
+main {
+  height: 85vh;
   overflow-y: scroll;
+  background-color: transparent !important;
 }
 
 .ant-menu-title-content {

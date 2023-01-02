@@ -3,14 +3,17 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { VscDashboard } from 'react-icons/vsc';
 import { BiUserCircle, BiListUl, BiCategoryAlt } from 'react-icons/bi';
 import { AiOutlineRead, AiFillQuestionCircle } from 'react-icons/ai';
-import { MdOutlineAddShoppingCart } from 'react-icons/md';
+import {
+  MdOutlineAddShoppingCart,
+  MdOutlineNotificationsActive,
+} from 'react-icons/md';
 import { SiBrandfolder } from 'react-icons/si';
 import { CgColorPicker } from 'react-icons/cg';
 import { HiOutlineNewspaper } from 'react-icons/hi';
 import { FaBloggerB } from 'react-icons/fa';
 import { TfiWrite } from 'react-icons/tfi';
 import { Layout, Menu } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Outlet } from 'react-router-dom';
 const { Header, Sider, Content } = Layout;
 
 const MainLayout = () => {
@@ -99,7 +102,7 @@ const MainLayout = () => {
               label: 'Orders',
             },
             {
-              key: 'blog',
+              key: 'blogs',
               icon: <FaBloggerB className='fs-4' />,
               label: 'Blogs',
               children: [
@@ -138,6 +141,7 @@ const MainLayout = () => {
           style={{
             padding: 0,
           }}
+          className='d-flex justify-content-between ps-1 pe-5'
         >
           {React.createElement(
             collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
@@ -146,6 +150,28 @@ const MainLayout = () => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
+          <div className='d-flex gap-4 align-items-center'>
+            <div className='position-relative'>
+              <MdOutlineNotificationsActive className='fs-4' />
+              <span className='badge bg-warning rounded-circle p-1 position-absolute'>
+                3
+              </span>
+            </div>
+            <div className='d-flex gap-3 align-items-center'>
+              <div>
+                <img
+                  height={32}
+                  width={32}
+                  src='https://stroyka-admin.html.themeforest.scompiler.ru/variants/ltr/images/customers/customer-4-64x64.jpg'
+                  alt='profile image'
+                />
+              </div>
+              <div>
+                <h5 className='mb-0'>John</h5>
+                <p className='mb-0'>john.doe@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </Header>
         <Content
           style={{
@@ -154,7 +180,7 @@ const MainLayout = () => {
             minHeight: 280,
           }}
         >
-          Content
+          <Outlet />
         </Content>
       </Layout>
     </Layout>
