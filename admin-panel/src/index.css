@@ -18,6 +18,7 @@ body {
   height: 64px;
   margin: 0px;
   background-color: #001529;
+  border-bottom: 1px solid #95c623;
 }
 
 .ant-layout {

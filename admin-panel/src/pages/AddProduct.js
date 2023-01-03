@@ -26,7 +26,7 @@ const props = {
   },
 };
 
-const AddBlog = () => {
+const AddProduct = () => {
   const [description, setDescription] = useState();
 
   const handleDescription = (e) => {
@@ -35,9 +35,32 @@ const AddBlog = () => {
   };
   return (
     <div>
-      <h3 className='mb-4 title'>Add Blog</h3>
-      <div className=''>
+      <h3 className='mb-4 title'>Add Product</h3>
+      <div>
         <form action=''>
+          <CustomInput type='text' label='Enter Product Title' />
+          <div className='mb-3'>
+            <ReactQuill
+              theme='snow'
+              value={description}
+              onChange={(e) => handleDescription(e)}
+            />
+          </div>
+          <div>
+            <CustomInput type='number' label='Enter Product Price' />
+          </div>
+          <select name='' id='' className='form-control py-3 mb-3'>
+            <option value=''>Select Brand</option>
+          </select>
+          <select name='' id='' className='form-control py-3 mb-3'>
+            <option value=''>Select Category</option>
+          </select>
+          <select name='' id='' className='form-control py-3 mb-3'>
+            <option value=''>Select Color</option>
+          </select>
+          <div>
+            <CustomInput type='number' label='Enter Product Quantity' />
+          </div>
           <Dragger {...props}>
             <p className='ant-upload-drag-icon'>
               <InboxOutlined />
@@ -50,22 +73,11 @@ const AddBlog = () => {
               uploading company data or other band files
             </p>
           </Dragger>
-          <div className='mt-4'>
-            <CustomInput type='text' label='Enter Blog Title' />
-          </div>
-          <select name='' id='' className='form-control py-3 mb-3'>
-            <option value=''>Select Blog Category</option>
-          </select>
-          <ReactQuill
-            theme='snow'
-            value={description}
-            onChange={(e) => handleDescription(e)}
-          />
           <button
             type='submit'
             className='btn btn-success border-0 rounded-3 my-5'
           >
-            Add Blog
+            Add Product
           </button>
         </form>
       </div>
@@ -73,4 +85,4 @@ const AddBlog = () => {
   );
 };
 
-export default AddBlog;
+export default AddProduct;

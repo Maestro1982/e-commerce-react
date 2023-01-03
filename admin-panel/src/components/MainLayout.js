@@ -13,7 +13,7 @@ import { HiOutlineNewspaper } from 'react-icons/hi';
 import { FaBloggerB } from 'react-icons/fa';
 import { TfiWrite } from 'react-icons/tfi';
 import { Layout, Menu } from 'antd';
-import { useNavigate, Outlet } from 'react-router-dom';
+import { useNavigate, Outlet, Link } from 'react-router-dom';
 const { Header, Sider, Content } = Layout;
 
 const MainLayout = () => {
@@ -55,7 +55,7 @@ const MainLayout = () => {
               label: 'Catalog',
               children: [
                 {
-                  key: 'add product',
+                  key: 'product',
                   icon: <MdOutlineAddShoppingCart className='fs-4' />,
                   label: 'Add Product',
                 },
@@ -157,7 +157,7 @@ const MainLayout = () => {
                 3
               </span>
             </div>
-            <div className='d-flex gap-3 align-items-center'>
+            <div className='d-flex gap-3 align-items-center dropdown'>
               <div>
                 <img
                   height={32}
@@ -166,9 +166,34 @@ const MainLayout = () => {
                   alt='profile image'
                 />
               </div>
-              <div>
+              <div
+                role='button'
+                id='dropdownMenuLink'
+                data-bs-toggle='dropdown'
+                aria-expanded='false'
+              >
                 <h5 className='mb-0'>John</h5>
                 <p className='mb-0'>john.doe@gmail.com</p>
+              </div>
+              <div className='dropdown-menu' aria-labelledby='dropdownMenuLink'>
+                <li>
+                  <Link
+                    className='dropdown-item py-1 mb-1'
+                    style={{ height: 'auto', lineHeight: '20px' }}
+                    to='/'
+                  >
+                    View Profile
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className='dropdown-item py-1 mb-1'
+                    style={{ height: 'auto', lineHeight: '20px' }}
+                    to='/'
+                  >
+                    Log Out
+                  </Link>
+                </li>
               </div>
             </div>
           </div>

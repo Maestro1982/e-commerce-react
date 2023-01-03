@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div className='py-5' style={{ background: '#efe7da', minHeight: '100vh' }}>
       <div className='my-5 w-25 bg-white rounded-3 mx-auto p-4'>
-        <h3 className='text-center'>Login</h3>
+        <h3 className='text-center title'>Login</h3>
         <p className='text-center'>Login to your account to continue.</p>
         <form>
           <CustomInput type='email' label='Email Address' id='email' />

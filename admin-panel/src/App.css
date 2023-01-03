@@ -1,11 +1,45 @@
+:root {
+  --color-212529: #212529;
+  --color-95c623: #95c623;
+  --color-47ad24: #47ad24;
+  --color-e52e2e: #e52e2e;
+  --color-828599: #828599;
+}
+
 .arrow-green {
-  color: green;
+  color: var(--color-47ad24);
+  font-size: 14px;
+  font-family: Roboto !important;
 }
 
 .arrow-red {
-  color: red;
+  color: var(--color-e52e2e);
+  font-size: 14px;
+  font-family: Roboto !important;
 }
 
 .quill {
   background-color: white;
+}
+
+.form-control {
+  box-shadow: none;
+}
+
+.title {
+  font-size: 28px;
+  font-family: Roboto !important;
+  color: var(--color-212529);
+}
+
+.subtitle {
+  font-size: 14px;
+  font-family: Roboto !important;
+  color: var(--color-828599);
+}
+
+.amount {
+  font-size: 24px;
+  font-family: Roboto !important;
+  color: var(--color-212529);
 }

@@ -87,7 +87,7 @@ const Dashboard = () => {
     xField: 'type',
     yField: 'sales',
     color: ({ type }) => {
-      return '#F07B40';
+      return '#e55812';
     },
     label: {
       position: 'middle',
@@ -113,50 +113,53 @@ const Dashboard = () => {
   };
   return (
     <div>
-      <h3 className='mb-4'>Dashboard</h3>
+      <h3 className='mb-4 title'>Dashboard</h3>
       <div className='d-flex justify-content-between align-items-center gap-3'>
         <div className='d-flex justify-content-between align-items-end flex-grow-1  bg-white rounded-3 p-3'>
           <div>
-            <p className=''>Total</p> <h4 className='mb-0'>€1100</h4>
+            <p className='subtitle'>Total</p>
+            <h4 className='mb-0 amount'>€1100</h4>
           </div>
           <div className='d-flex flex-column align-items-end'>
             <h6>
               <HiOutlineTrendingDown /> 32%
             </h6>
-            <p className='mb-0'>Compared to November 2022</p>
+            <p className='mb-0 subtitle'>Compared to November 2022</p>
           </div>
         </div>
         <div className='d-flex justify-content-between align-items-end flex-grow-1  bg-white rounded-3 p-3'>
           <div>
-            <p className=''>Total</p> <h4 className='mb-0'>€1100</h4>
+            <p className='subtitle'>Total</p>
+            <h4 className='mb-0 amount'>€1100</h4>
           </div>
           <div className='d-flex flex-column align-items-end'>
             <h6 className='arrow-red'>
               <HiOutlineTrendingDown /> 32%
             </h6>
-            <p className='mb-0'>Compared to November 2022</p>
+            <p className='mb-0 subtitle'>Compared to November 2022</p>
           </div>
         </div>
         <div className='d-flex justify-content-between align-items-end flex-grow-1  bg-white rounded-3 p-3'>
           <div>
-            <p className=''>Total</p> <h4 className='mb-0'>€1100</h4>
+            <p className='subtitle'>Total</p>
+            <h4 className='mb-0 amount'>€1100</h4>
           </div>
           <div className='d-flex flex-column align-items-end'>
             <h6 className='arrow-green'>
               <HiOutlineTrendingDown /> 32%
             </h6>
-            <p className='mb-0'>Compared to November 2022</p>
+            <p className='mb-0 subtitle'>Compared to November 2022</p>
           </div>
         </div>
       </div>
       <div className='mt-4'>
-        <h3 className='mb-4'>Income Statics</h3>
+        <h3 className='mb-5 title'>Income Statics</h3>
         <div>
           <Column {...config} />
         </div>
       </div>
       <div className='mt-4'>
-        <h3 className='mb-4'>Recent Orders</h3>
+        <h3 className='mb-5 title'>Recent Orders</h3>
         <div>
           <Table columns={columns} dataSource={dataTable} />
         </div>
