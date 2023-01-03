@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const dbConnect = require('./config/dbConnect');
 const app = express();
 const dotenv = require('dotenv').config();
@@ -18,6 +19,7 @@ const { notFound, errorHandler } = require('./middlewares/errorHandler.js');
 dbConnect();
 
 app.use(morgan('dev'));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
